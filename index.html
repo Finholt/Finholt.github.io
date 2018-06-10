@@ -7,11 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Connor Finholt</title>
     <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 
-<body>
+<body style="overflow: hidden">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">Finholt</a>
+        <a class="navbar-brand" href="#">Connor Finholt</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01"
             aria-expanded="false" aria-label="Toggle navigation" style="">
             <span class="navbar-toggler-icon"></span>
@@ -19,18 +22,18 @@
 
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item active" id="homeNav">
                     <a class="nav-link" href="#">Home
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Resume</a>
+                <li class="nav-item" id="resumeNav">
+                    <a class="nav-link" href="html/resume.html">Resume</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" id="portfolioNav">
                     <a class="nav-link" href="#">Portfolio</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" id="aboutNav">
                     <a class="nav-link" href="#">About</a>
                 </li>
             </ul>
@@ -49,30 +52,30 @@
         </div>
 
         <div class="row">
-            <div class="col-md-4 col-sm-12 pl-0">
+            <div class="col-md-4 col-sm-12 pl-0 animated fadeInUp" id="resumeCard">
                 <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
                     <div class="card-header">Resume</div>
                     <div class="card-body">
                         <p class="card-text">Check out my previous work experiences and school achievements.</p>
-                        <button class="btn btn-secondary col-sm-8 offset-sm-2">Check it out!</button>
+                        <a class="btn btn-secondary col-sm-8 offset-sm-2" href="html/resume.html">Check it out!</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-12">
+            <div class="col-md-4 col-sm-12" id="portfolioCard">
                 <div class="card border-primary mb-3" style="max-width: 20rem;">
                     <div class="card-header">Portfolio</div>
                     <div class="card-body text-primary">
                         <p class="card-text">See some examples of projects that I've worked on specifically to showcase my ability.</p>
-                        <button class="btn btn-primary col-sm-8 offset-sm-2">Check it out!</button>
+                        <button class="btn btn-primary col-sm-8 offset-sm-2">Under Construction</button>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-12 pr-0">
+            <div class="col-md-4 col-sm-12 pr-0" id="aboutCard">
                 <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
                     <div class="card-header">About</div>
                     <div class="card-body">
                         <p class="card-text">Learn some basic information about me, my career goals, and my passions.</p>
-                        <button class="btn btn-secondary col-sm-8 offset-sm-2">Check it out!</button>
+                        <button class="btn btn-secondary col-sm-8 offset-sm-2">Under Construction</button>
                     </div>
                 </div>
             </div>
