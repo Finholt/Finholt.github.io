@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Connor Finholt</title>
-    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
 </head>
 
-<body style="overflow: hidden">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="z-index: 1000;">
         <a class="navbar-brand" href="#">Connor Finholt</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01"
             aria-expanded="false" aria-label="Toggle navigation" style="">
@@ -41,7 +43,66 @@
     </nav>
     <br>
 
-    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-12">
+    <div id="hexGrid" class="d-none d-lg-block">
+        <div id="hex12" class="hexagon" style="top: 4.7vw; left:0.2vw;">
+            <div class="hexagonInner"></div>
+        </div>
+        <div id="hex21" class="hexagon" style="top: 12vw; left:-4vw;">
+            <div class="hexagonInner"></div>
+        </div>
+        <div id="hex23" class="hexagon" style="top: 12vw; left:4.4vw;">
+            <div class="hexagonInner"></div>
+        </div>
+        <div id="hex25" class="hexagon" style="top: 12vw; left:12.8vw;">
+            <div class="hexagonInner"></div>
+        </div>
+        <div id="hex36" class="hexagon" style="top: 19.3vw; left:17vw;">
+            <div class="hexagonInner"></div>
+        </div>
+        <div id="hex38" class="hexagon" style="top: 19.3vw; left:25.4vw;">
+            <div class="hexagonInner">
+                <a href="https://www.linkedin.com/in/connorfinholt/" target="_blank"><i class="fab fa-linkedin centerHex" onmouseover="hexHover('hex38', 'ur')"></i></a>
+            </div>
+        </div>
+        <div id="hex45" class="hexagon" style="top: 26.6vw; left:12.8vw;">
+            <div class="hexagonInner">
+                <a href="https://codepen.io/Finholt/" target="_blank"><i class="fab fa-codepen centerHex" onmouseover="hexHover('hex45', 'l')"></i></a>
+            </div>
+        </div>
+        <div id="hex47" class="hexagon" style="top: 26.6vw; left:21.2vw;">
+            <img src="resources/hexProfile.png" alt="Connor Finholt's Headshot" onmouseover="hexHover('hex47', 'm')"
+                style="position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 7vw;
+                height: 8.08vw;
+                z-index: 200;
+                margin-left: -3.5vw;
+                margin-top: -4.04vw;">
+        </div>
+        <div id="hex49" class="hexagon" style="top: 26.6vw; left:29.6vw;">
+            <div class="hexagonInner">
+                <a href="https://github.com/Finholt/Finholt.github.io" target="_blank"><i class="fab fa-github centerHex" onmouseover="hexHover('hex49', 'r')"></i></a>
+            </div>
+        </div>
+        <div id="hex56" class="hexagon" style="top: 33.9vw; left:17vw;">
+            <div class="hexagonInner">
+                <a href="https://twitter.com/Sea_Fin" target="_blank"><i class="fab fa-twitter centerHex" onmouseover="hexHover('hex56', 'll')"></i></a>
+            </div>
+        </div>
+        <div id="hex58" class="hexagon" style="top: 33.9vw; left:25.4vw;">
+            <div class="hexagonInner"></div>
+        </div>
+        <div id="hex69" class="hexagon" style="top: 41.2vw; left:29.6vw;">
+            <div class="hexagonInner"></div>
+        </div>
+        <div id="hex78" class="hexagon" style="top: 48.5vw; left:25.4vw;">
+            <div class="hexagonInner"></div>
+        </div>
+    </div>
+    
+
+    <div class="col-lg-7 offset-lg-5 pr-5 col-md-10 offset-md-1 col-sm-12">
         <div class="row">
             <div class="jumbotron col-sm-12 p-4">
                 <h1>Welcome!</h1>
@@ -52,8 +113,8 @@
         </div>
 
         <div class="row">
-            <div class="col-md-4 col-sm-12 pl-0 animated fadeInUp" id="resumeCard">
-                <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+            <div class="col-md-8 col-sm-12 pl-0" id="resumeCard">
+                <div class="card text-white bg-primary mb-3" style="min-height: 10vw;">
                     <div class="card-header">Resume</div>
                     <div class="card-body">
                         <p class="card-text">Check out my previous work experiences and school achievements.</p>
@@ -61,17 +122,35 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-12" id="portfolioCard">
-                <div class="card border-primary mb-3" style="max-width: 20rem;">
+            <div class="col-md-4 d-none d-md-block">
+                <div id="hexLinkResume" class="hexagon" style="top: 50%; left:50%; margin-left: -4vw; margin-top: -2.31vw;">
+                    <div class="hexagonInner">
+                        <a href="html/resume.html"><i class="fas fa-file-alt centerHex" onmouseover="hexHover('hexLinkResume', 'm')"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 d-none d-md-block">
+                <div id="hexLinkPortfolio" class="hexagon" style="top: 50%; left:50%; margin-left: -4vw; margin-top: -2.31vw;">
+                    <div class="hexagonInner">
+                        <i class="fas fa-code centerHex" style="width: 6vw; margin-left: -3vw;" onmouseover="hexHover('hexLinkPortfolio', 'm')"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-12 pl-0" id="portfolioCard">
+                <div class="card border-primary mb-3" style="min-height: 10vw;">
                     <div class="card-header">Portfolio</div>
-                    <div class="card-body text-primary">
+                    <div class="card-body">
                         <p class="card-text">See some examples of projects that I've worked on specifically to showcase my ability.</p>
                         <button class="btn btn-primary col-sm-8 offset-sm-2">Under Construction</button>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-12 pr-0" id="aboutCard">
-                <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-sm-12 pl-0" id="aboutCard">
+                <div class="card text-white bg-primary mb-3" style="min-height: 10vw;">
                     <div class="card-header">About</div>
                     <div class="card-body">
                         <p class="card-text">Learn some basic information about me, my career goals, and my passions.</p>
@@ -79,8 +158,36 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-4 d-none d-md-block">
+                    <div id="hexLinkAbout" class="hexagon" style="top: 50%; left:50%; margin-left: -4vw; margin-top: -2.31vw;">
+                        <div class="hexagonInner">
+                            <i class="fas fa-male centerHex" onmouseover="hexHover('hexLinkAbout', 'm')"></i>
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
 </body>
 
 </html>
