@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Connor Finholt</title>
+    <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
     <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -16,16 +16,16 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="z-index: 1000;">
-        <a class="navbar-brand" href="#">Connor Finholt</a>
+        <a class="navbar-brand" href="index.html">Connor Finholt</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01"
-            aria-expanded="false" aria-label="Toggle navigation" style="">
+            aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarColor01">
+        <div class="navbar-collapse collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active" id="homeNav">
-                    <a class="nav-link" href="#">Home
+                    <a class="nav-link" href="index.html">Home
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
@@ -33,10 +33,10 @@
                     <a class="nav-link" href="html/resume.html">Resume</a>
                 </li>
                 <li class="nav-item" id="portfolioNav">
-                    <a class="nav-link" href="#">Portfolio</a>
+                    <a class="nav-link" href="html/portfolio.html">Portfolio</a>
                 </li>
                 <li class="nav-item" id="aboutNav">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="html/about.html">About</a>
                 </li>
             </ul>
         </div>
@@ -70,15 +70,17 @@
             </div>
         </div>
         <div id="hex47" class="hexagon" style="top: 26.6vw; left:21.2vw;">
-            <img src="resources/hexProfile.png" alt="Connor Finholt's Headshot" onmouseover="hexHover('hex47', 'm')"
-                style="position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 7vw;
-                height: 8.08vw;
-                z-index: 200;
-                margin-left: -3.5vw;
-                margin-top: -4.04vw;">
+            <a href="html/about.html">
+                <img src="resources/hexProfile.png" alt="Connor Finholt's Headshot" onmouseover="hexHover('hex47', 'm')"
+                    style="position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 7vw;
+                    height: 8.08vw;
+                    z-index: 200;
+                    margin-left: -3.5vw;
+                    margin-top: -4.04vw;">
+            </a>
         </div>
         <div id="hex49" class="hexagon" style="top: 26.6vw; left:29.6vw;">
             <div class="hexagonInner">
@@ -102,23 +104,22 @@
     </div>
     
 
-    <div class="col-lg-7 offset-lg-5 pr-5 col-md-10 offset-md-1 col-sm-12">
-        <div class="row">
-            <div class="jumbotron col-sm-12 p-4">
-                <h1>Welcome!</h1>
-                <hr class="my-4">
-                <p class="lead">My name is Connor Finholt. I'm a Front-End Developer working in the Des Moines, IA area. Feel free to look
-                    around this site for my experience and examples of my work!</p>
-            </div>
+    <div class="col-lg-7 offset-lg-5  col-md-10 offset-md-1 col-sm-12">
+        <div class="jumbotron col-sm-12 p-4">
+            <h1>Welcome!</h1>
+            <hr class="my-4">
+            <p class="lead">My name is Connor Finholt. I'm a Front-End Developer working in the Des Moines, IA area. Feel free to look
+                around this site for my experience and examples of my work!</p>
+            <br>
+            <p class="lead">If you'd like to get in contact with me, please email <a href="mailto:connor.finholt@gmail.com">connor.finholt@gmail.com</a></p>
         </div>
-
         <div class="row">
-            <div class="col-md-8 col-sm-12 pl-0" id="resumeCard">
+            <div class="col-md-8 col-sm-12" id="resumeCard">
                 <div class="card text-white bg-primary mb-3" style="min-height: 10vw;">
                     <div class="card-header">Resume</div>
                     <div class="card-body">
-                        <p class="card-text">Check out my previous work experiences and school achievements.</p>
-                        <a class="btn btn-secondary col-sm-8 offset-sm-2" href="html/resume.html">Check it out!</a>
+                        <p class="card-text">Check out some of my previous work experiences.</p>
+                        <a class="btn btn-secondary col-8 offset-2" href="html/resume.html">Check it out!</a>
                     </div>
                 </div>
             </div>
@@ -134,37 +135,55 @@
             <div class="col-md-4 d-none d-md-block">
                 <div id="hexLinkPortfolio" class="hexagon" style="top: 50%; left:50%; margin-left: -4vw; margin-top: -2.31vw;">
                     <div class="hexagonInner">
-                        <i class="fas fa-code centerHex" style="width: 6vw; margin-left: -3vw;" onmouseover="hexHover('hexLinkPortfolio', 'm')"></i>
+                        <a href="html/portfolio.html"><i class="fas fa-code centerHex" style="width: 6vw; margin-left: -3vw;" onmouseover="hexHover('hexLinkPortfolio', 'm')"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-8 col-sm-12 pl-0" id="portfolioCard">
+            <div class="col-md-8 col-sm-12" id="portfolioCard">
                 <div class="card border-primary mb-3" style="min-height: 10vw;">
                     <div class="card-header">Portfolio</div>
                     <div class="card-body">
                         <p class="card-text">See some examples of projects that I've worked on specifically to showcase my ability.</p>
-                        <button class="btn btn-primary col-sm-8 offset-sm-2">Under Construction</button>
+                        <a class="btn btn-primary col-8 offset-2" href="html/portfolio.html">Click me!</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8 col-sm-12 pl-0" id="aboutCard">
+            <div class="col-md-8 col-sm-12" id="aboutCard">
                 <div class="card text-white bg-primary mb-3" style="min-height: 10vw;">
                     <div class="card-header">About</div>
                     <div class="card-body">
                         <p class="card-text">Learn some basic information about me, my career goals, and my passions.</p>
-                        <button class="btn btn-secondary col-sm-8 offset-sm-2">Under Construction</button>
+                        <a class="btn btn-secondary col-8 offset-2" href="html/about.html">Find out more!</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 d-none d-md-block">
-                    <div id="hexLinkAbout" class="hexagon" style="top: 50%; left:50%; margin-left: -4vw; margin-top: -2.31vw;">
-                        <div class="hexagonInner">
-                            <i class="fas fa-male centerHex" onmouseover="hexHover('hexLinkAbout', 'm')"></i>
+                <div id="hexLinkAbout" class="hexagon" style="top: 50%; left:50%; margin-left: -4vw; margin-top: -2.31vw;">
+                    <div class="hexagonInner">
+                        <a href="html/about.html"><i class="fas fa-male centerHex" onmouseover="hexHover('hexLinkAbout', 'm')"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 d-lg-none" id="portfolioCard">
+                <div class="card border-primary mb-3" style="min-height: 10vw;">
+                    <div class="card-header">External Links</div>
+                    <div class="card-body">
+                        <div class="col-2 offset-3">
+                            <a href="https://www.linkedin.com/in/connorfinholt/" target="_blank"><i class="fab fa-linkedin centerHex"></i></a>
+                        </div>
+                        <div class="col-2 offset-5">
+                            <a href="https://codepen.io/Finholt/" target="_blank"><i class="fab fa-codepen centerHex"></i></a>
+                        </div>
+                        <div class="col-2 offset-7">
+                            <a href="https://github.com/Finholt/Finholt.github.io" target="_blank"><i class="fab fa-github centerHex"></i></a>
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
     </div>
 
@@ -188,6 +207,7 @@
           </div>
         </div>
       </div>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 
 </html>

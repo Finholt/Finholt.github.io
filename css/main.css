@@ -1,11 +1,10 @@
-/* body {
-    background-color: #454749;
-    margin: 0 0 0 0;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+a {
+    color: #F39C12;
+}
 
-} */
+.collapse.in {        
+    display: block;       
+}
 
 .hexagon {
     width: 8vw;
